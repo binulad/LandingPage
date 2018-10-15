@@ -1,0 +1,39 @@
+// Color 
+
+$white : #ffffff;
+$theme-color : #2E4053;
+$purple-color : #532e52;
+$light-color: #D6DBDF;
+$light-bg-color: #f9f9f9;
+$light-text-color: #f2f2f2;
+$gray-4 : #444444;
+$gray-7 : #777777;
+$gray-9 : #999999;
+
+// Gradient color 
+
+$gradient-color: linear-gradient(to right, $theme-color 0%, $purple-color 100%);
+
+// Font 
+
+$font-family-base : "Nunito";
+$font-size-base : 16px;
+$line-height-base : 18px;
+$font-weight-base : 600;
+
+$font-weight-light : 300;
+$font-weight-regular : 400;
+$font-weight-semibold : 600;
+$font-weight-bold : 700;
+$font-weight-xbold : 800;
+
+
+//Poligon 
+$polygon-top-right : polygon(0% 0%, 101% 0%, 0% 100%);
+$polygon-top-left : polygon(100% 0%, 101% 100%, 0% 0%);
+$polygon-bottom-right : polygon(0% 100%, 101% 100%, 100% 0%);
+$polygon-bottom-left : polygon(0% 100%, 101% 100%, 0% 0%);
+$position-top : "top";
+$position-bottom : "bottom";
+
+

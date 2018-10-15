@@ -1,0 +1,89 @@
+@mixin overlay() {
+	position: absolute;
+	left: 0;
+	right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@mixin polygon($background, $height, $polygon, $position) {
+  content: "";
+  background: $background;
+  position: absolute;
+  left: 0;
+  @if($position == "top") {
+    top: 0;
+  } 
+  @else {
+    bottom: 0;
+  }
+  width: 100%;
+  height: $height;
+  @include clip-path($polygon);
+}
+
+@mixin box-shadow($shadow...) {
+  -moz-box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+
+@mixin transition-property($properties...) {
+  -webkit-transition-property: $properties;
+  -moz-transition-property: $properties;
+  transition-property: $properties;
+}
+
+@mixin transition-duration($property) {
+  -webkit-transition-duration: $property;
+  -moz-transition-duration: $property;
+  transition-duration: $property;
+}
+
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -khtml-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin clip-path($clip-path) {
+  -webkit-clip-path: $clip-path;
+  clip-path: $clip-path;
+}
+
+@mixin section-bg-img($bg-img) {
+  background-image: url($bg-img);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin theme-button($background, $color, $border-color) {
+  background: $background;
+	color: $color;
+	font-size: 16px;
+	line-height: 24px;
+  border: 2px solid $border-color;
+  @include box-shadow(0 7px 10px 0px rgba(0,0,0,0.2));
+  @include transition(box-shadow .4s ease-in-out);
+  &:hover {
+    color: $color;
+    @include box-shadow(none);
+  }
+}

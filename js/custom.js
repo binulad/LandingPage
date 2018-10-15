@@ -69,8 +69,17 @@
     }); 
 
     //  Back to top js
-    $(".back_to_top a").click(function() {
-      $("html, body").animate({ scrollTop: 0 }, 2000);
+    
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 300) {
+        $('.back_to_top').fadeIn();
+      } else {
+        $('.back_to_top').fadeOut();
+      }
+    }); 
+
+    $('.back_to_top a').click(function(){
+      $("html, body").animate({ scrollTop: 0 }, 600);
       return false;
     });
 

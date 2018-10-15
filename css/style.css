@@ -490,7 +490,7 @@ p {
 }
 
 .back_to_top {
-  position: absolute;
+  position: fixed;
   right: 50px;
   z-index: 999;
   bottom: 45px;

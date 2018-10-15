@@ -68,6 +68,12 @@
       return false;
     }); 
 
+    //  Back to top js
+    $(".back_to_top a").click(function() {
+      $("html, body").animate({ scrollTop: 0 }, 2000);
+      return false;
+    });
+
 	});
 	$(window).scroll(function() {
 		var header_height = $('nav').height();

@@ -7,6 +7,7 @@ body {
   font-size: $font-size-base;
   line-height: $line-height-base;
   font-weight: $font-weight-base;
+  position: relative;
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: $font-weight-bold;
@@ -171,6 +172,7 @@ p {
   .service_box {
     p {
       text-align: center;
+      margin-bottom: 0;
     }
   }
 }
@@ -373,6 +375,29 @@ p {
     }
   }
 }
+//  Back to top css
+.back_to_top {
+  position: absolute;
+  right: 50px;
+  z-index: 999;
+  bottom: 45px;
+  a {
+    background: $gradient-color;
+    color: $white;
+    font-size: 22px;
+    line-height: 36px;
+    height: 40px;
+    width: 40px;
+    border: 2px solid $theme-color;
+    @include border-radius(50%);
+    @include transition(all .4s ease-in-out);
+    text-align: center;
+    &:hover {
+      background: $white;
+      color: $theme-color;
+    }
+  }
+}
 
 
 // RESPONSIVE CSS
@@ -387,5 +412,32 @@ p {
     .nav-link {
       padding: .5rem 1rem;
     }
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+  h6 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .back_to_top {
+    right: 20px;
+    bottom: 110px;
   }
 }
